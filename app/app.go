@@ -11,7 +11,12 @@ func Gerar() *cli.App {
 	app.Commands = []cli.Command {
 		Name: "ip",
 		Usage: "Buscas IPS de endereços na internet",
-		Flags: 
+		Flags: []cli.Flag {
+			cli.StringFlag{
+				Name: "host",
+				Value:  "github.com/YlanzinhoY" ,
+			}
+		}
 	}
 
 	return app
